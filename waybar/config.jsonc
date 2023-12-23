@@ -2,11 +2,11 @@
     "layer": "top",
     "position": "top",
     "height": 10,
-    "margin-bottom":0,
-    "margin-top":0,
+    "margin-bottom": 0,
+    "margin-top": 0,
     
-    "modules-left": ["cpu","memory"],
-    "modules-center": ["sway/workspaces"],
+    "modules-left": ["cpu", "memory", "sway/workspaces"],
+    "modules-center": ["wlr/taskbar"],
     "modules-right":  ["tray", "pulseaudio","backlight","battery","clock"],
     
     "battery": {
@@ -14,11 +14,11 @@
         "warning": 30,
         "critical": 15
       },
-      "format": "{icon}&#8239;{capacity}%",
-      "format-charging": "&#8239;{capacity}%",
-      "format-plugged": "&#8239;{capacity}%",
+      "format": "{icon}&#8239; {capacity}%",
+      "format-charging": "&#8239; {capacity}%",
+      "format-plugged": "&#8239; {capacity}%",
       "format-alt": "{icon} {time}",
-      "format-icons": ["", "", "", "", "", "", ""]
+      "format-icons": [" ", " ", " ", "", ""]
     },
     "wlr/workspaces": {
          "sort-by-name": true,
@@ -68,9 +68,19 @@
         "headset": "🎧",
         "phone": "",
         "portable": "",
-        "car": "",
         "default": ["", "", ""]
       },
       "on-click": "pavucontrol"
-    }
+    },
+    "wlr/taskbar": {
+      "format": "{icon} {title:.64}",
+      "icon-size": 14,
+      "icon-theme": "Numix-Circle",
+      "tooltip-format": "{title}",
+      "on-click": "activate",
+      "on-click-middle": "close",
+      "ignore-list": [
+         "Alacritty"
+      ]
+   }
 }

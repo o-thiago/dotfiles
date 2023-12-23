@@ -16,3 +16,4 @@ set PATH $HOME/.local/bin $PATH
 set PATH $HOME/.yarn/bin $PATH
 set PATH /var/lib/flatpak/exports/bin $PATH
 
+set SDL_VIDEODRIVER wayland
