@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-    background-color: rgba(36, 40, 59, 0.75);
+    background: alpha(@theme_base_color, 0.9)
 }
 
 #workspaces {
@@ -23,13 +23,17 @@ window#waybar {
     font-weight: bolder;
 }
 
-.modules-left, .modules-center, .modules-right, #workspaces button {
-    background: #252525;
+.modules-left, .modules-center, .modules-right {
+    background: shade(@theme_base_color, 1);
+}
+
+#workspaces button {
+    background: shade(@theme_base_color, 1.5);
 }
 
 #workspaces button.active, #workspaces button.focused {
     padding: 0 10px;
-    background: #7C9D96;
+    background: shade(@theme_base_color, 2.0);
 }
 
 #tray,
