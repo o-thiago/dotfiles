@@ -15,29 +15,4 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
--- PLUGINS --
-local plugins = {
-	{
-		"ellisonleao/gruvbox.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			vim.cmd([[colorscheme gruvbox]])
-
-			local alphahls = {"Normal", "NormalFloat"}
-			for i, hi in pairs(alphahls) do
-				vim.api.nvim_set_hl(0, hi, { bg = "none" })
-			end
-		end
-	},
-	{
-		"hrsh7th/nvim-cmp",
-		event = "InsertEnter",
-		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-		}
-	}
-}
-
-require("lazy").setup(plugins, opts)
+require("lazy").setup("plugins")
