@@ -47,7 +47,7 @@ local function setup()
 		mapping = cmp.mapping.preset.insert({
 			['<C-n>'] = cmp.mapping.select_prev_item(cmp_select),
 			['<C-p>'] = cmp.mapping.select_next_item(cmp_select),
-			['<tab>'] = cmp.mapping.confirm({ select = true }),
+			['<enter>'] = cmp.mapping.confirm({ select = true }),
 			['<C-Space>'] = cmp.mapping.complete(),
 		}),
 	})
