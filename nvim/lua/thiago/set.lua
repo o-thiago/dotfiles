@@ -19,9 +19,13 @@ vim.opt.colorcolumn = "80"
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
+-- This is so searches are automatically implied to be case sensitive or not!
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
+
 -- UNDOS --
 vim.opt.swapfile = false
--- i shoul probably setup a way to proper backup stuff... but i need to study
+-- i should probably setup a way to proper backup stuff... but i need to study
 -- this before!
 
 -- SCROLL --
