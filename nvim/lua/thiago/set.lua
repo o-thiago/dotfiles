@@ -13,7 +13,7 @@ vim.opt.smartindent = true
 
 -- RIGHT COLUMN --
 vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "100"
 
 -- SEARCH --
 vim.opt.hlsearch = false
