@@ -4,10 +4,4 @@ exec swww init
 exec --no-startup-id /usr/lib/xdg-desktop-portal -r
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-output * max_render_time 2
-output * adaptive_sync on
-
-output eDP-1 pos 1920 0 res 1366x768@60.027HZ
-output HDMI-A-1 pos 0 0 res 1920x1080@120.000HZ 
-
 include /etc/sway/config.d/*
