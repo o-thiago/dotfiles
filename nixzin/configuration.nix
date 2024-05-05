@@ -4,6 +4,7 @@
 { inputs, pkgs, ... }:
 let
 	inherit (import ./variables.nix) state timezone hostname locale keymap;
+	inherit (import ../home-manager/variables.nix) username;
 in
 {
   imports =
@@ -44,7 +45,7 @@ in
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.thiago = {
+  users.users.${username} = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };

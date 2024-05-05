@@ -17,11 +17,12 @@
     system = "x86_64-linux";
     pkgs = import nixpkgs {inherit system;};
 	inherit (import ./variables.nix) hostname;
+	inherit (import ../home-manager/variables.nix) username;
   in {
-    homeConfigurations.thiago = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = {inherit inputs;};
-      modules = ["../home-manager/home.nix"];
+      modules = [../home-manager/home.nix];
     };
 
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
