@@ -6,6 +6,10 @@
 	locale = "en_US.UTF-8";
 	timezone = "Brazil/East";
 
+	# Keymapping
+	keymap = "br-abnt2";
+
+
 	# The main username
 	username = "thiago";
 

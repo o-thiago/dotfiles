@@ -1,14 +1,18 @@
-{ config, inputs, pkgs, ... }:
+{ inputs, pkgs, ... }:
+let
+	inherit (import ./variables.nix) username;
+	inherit (import ../nixzin/variables.nix) state;
+in
 {
   imports = [
-	./config/alacritty.nix
-	./config/theme.nix
+	./alacritty.nix
+	./theme.nix
   ];
 
   home = {
-	username = "thiago";
-	homeDirectory = "/home/thiago";
-	stateVersion = "23.11";
+	username = "${username}";
+	homeDirectory = "/home/${username}";
+	stateVersion = "${state}";
 	packages = with pkgs; [
 		firefox
 		git

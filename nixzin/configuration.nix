@@ -3,14 +3,13 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 { inputs, pkgs, ... }:
 let
-	inherit (import ./variables.nix) state;
+	inherit (import ./variables.nix) state timezone hostname locale keymap;
 in
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./audio.nix
-	  inputs.catppuccin.nixosModules.catppuccin
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -20,17 +19,16 @@ in
   };
 
   networking = {
-	  hostName = "thiago";
+	  hostName = hostname;
 	  networkmanager.enable = true;
   };
 
-  time.timeZone = "Brazil/East";
+  time.timeZone = timezone;
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = locale;
   console = {
     font = "Lat2-Terminus16";
-    keyMap = "br-abnt2";
+    keyMap = keymap;
     # useXkbConfig = true; # I am using wayland...
   };
   
