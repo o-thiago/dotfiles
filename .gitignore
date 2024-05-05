@@ -5,10 +5,11 @@
 !starship.toml
 
 !/nvim/
-!/alacritty/
 !/fish/
 !/wofi/
 !/wlogout/
 !/sway/
 !/waybar/
 !/mako/
+!/home-manager/
+!/nixos/
